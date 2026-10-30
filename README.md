@@ -94,17 +94,17 @@ Video-MP4 reads the file, picks the fastest video route that will work, converts
 
 ```mermaid
 flowchart LR
-    A[Your video file] --> B[Read container<br/>MP4 / MOV / Matroska / WebM]
-    B --> C{Pick video route}
-    C -->|H.264, no changes needed| D[Copy mode<br/>instant]
-    C -->|Other codec, resize or fps change| E[Fast mode<br/>decode and re-encode]
-    C -->|Last resort| F[Compatibility mode<br/>seek frame by frame]
-    B --> G[Audio chain<br/>browser, ffmpeg, recording]
-    D --> H[MP4 writer]
+    A["Your video file"] --> B["Read the container (MP4, MOV, Matroska, WebM)"]
+    B --> C{"Pick a video route"}
+    C -->|"H.264, no changes needed"| D["Copy mode (instant)"]
+    C -->|"Other codec, resize or fps change"| E["Fast mode (decode, then re-encode)"]
+    C -->|"Last resort"| F["Compatibility mode (frame by frame)"]
+    B --> G["Audio chain (browser, ffmpeg, recording)"]
+    D --> H["MP4 writer"]
     E --> H
     F --> H
     G --> H
-    H --> I[Your MP4<br/>saved from memory]
+    H --> I["Your MP4, saved from memory"]
 ```
 
 Everything runs in the page itself. Nothing leaves your device.
