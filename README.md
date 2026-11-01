@@ -401,9 +401,9 @@ Pull requests are welcome too. Keep Video-MP4 a single, dependency-free file whe
 
 ## License
 
-<!-- Choose a license and add a LICENSE file, for example MIT. -->
+Video-MP4 is free software, released under the [GNU General Public License v3.0](LICENSE). Copyright (c) 2026 VXZYSSRR.
 
-Add your license here.
+The HTML file embeds a GPL-enabled build of ffmpeg, so the file as a whole is distributed under the GPL. If you share or host it, include this licence and make the corresponding source available.
 
 The conversion app and the ffmpeg core are different things with different licences.
 
